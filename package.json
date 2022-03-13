@@ -1,6 +1,6 @@
 {
     "name": "@chisel-ui/columns",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "chisel-ui columns layout primitive",
     "private": false,
     "type": "module",
