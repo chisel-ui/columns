@@ -19,7 +19,7 @@ function getBreakpoint(switchAt?: number | string | keyof sizes) {
     return switchAt
 }
 
-const { gutter = '0px', theme = {}, as: Tag = 'div', fraction = '1/2', columns = 1, dense = false, switchAt, style, ...props } = Astro.props as StackProps
+const { gutter = '0px', theme = {}, as: Tag = 'div', fraction = '1/2', columns = 1, dense = false, switchAt, style = '', ...props } = Astro.props as StackProps
 const id = uid()
 
 const maybeGutter = getSafeGutter(theme, gutter)
@@ -35,7 +35,7 @@ const inlineStyle = maybeBreakpoint && `
 `
 ---
 
-<Tag data-chisel-columns {id} style={`--gutter: ${maybeGutter};${style}`} {...props}>
+<Tag data-chisel-columns={dense ? "dense" : ""} {id} style={`--gutter: ${maybeGutter};${style}`} {...props}>
     <slot />
 </Tag>
 
