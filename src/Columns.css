@@ -1,0 +1,21 @@
+@property --columns {
+    syntax: "<number>";
+    inherit: true;
+    initial-value: 1;
+}
+
+[data-chisel-columns] {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+    gap: var(--gutter, 0px);
+    grid-auto-flow: row;
+}
+
+[data-chisel-columns="dense"] {
+    grid-auto-flow: row dense;
+}
+
+[data-chisel-columns] > * {
+    margin: 0;
+}
