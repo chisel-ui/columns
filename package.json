@@ -1,11 +1,11 @@
 {
 	"name": "@chisel-ui/columns",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "chisel-ui columns layout primitive",
 	"private": false,
 	"type": "module",
 	"files": [
-		"InlineCluster.astro"
+		"Columns.astro"
 	],
 	"scripts": {
 		"prepare": "husky install"
